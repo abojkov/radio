@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rAdio v1.0</title>
+    <link rel="icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script rel="stylesheet" src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#headerIns").load("components/headerC.html");
+            $("#footerIns").load("components/footerC.html");
+
+            $("#chooseCountry").on("change", function () {
+                var chosenCountry = $("#chooseCountry").val();
+
+                $(".stations").each(function () {
+                    $(this).hide();
+                });
+                $("#" + chosenCountry + "Stations").show();
+            });
+
+            $("#mkStations").load("components/MKStations.html");
+            $("#grStations").load("components/GRStations.html");
+            $("#rsStations").load("components/RSStations.html");
+        });
+    </script>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="headerIns" class="alt"></header>
+
+        <!-- Nav -->
+
+
+        <!-- Main -->
+        <div id="main">
+            <section id="content" class="main">
+                <section>
+                    <div class="row gtr-uniform">
+                        <div class="col-12">
+                            <select id="chooseCountry">
+                                <option value="">- Одбери држава -</option>
+                                <option value="mk">Македонија</option>
+                                <option value="gr">Грција</option>
+                                <option value="rs">Србија</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                <br/>
+                <div class="stations" id="mkStations">
+
+                </div>
+                <div class="stations" id="grStations">
+
+                </div>
+                <div class="stations" id="rsStations">
+
+                </div>
+
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footerIns"></footer>
+
+    </div>
+
+    <div id="scripts">
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Канал 77 - rAdio</title>
+    <link rel="icon" href="../../images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+    <script rel="stylesheet" src="../../assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#headerIns").load("../headerC.html");
+            $("#footerIns").load("../footerC.html");
+            document.getElementById('streaming').play();
+        });
+    </script>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <header id="header" style="padding: 20px;" class="alt">
+            <a href="../../index.html" style="text-decoration: none"><span class="logo"><img src="../../images/logoFull.png" style="width: 125px; display: inline-block;" alt="" /></span></a>
+        </header>
+
+        <div id="main">
+            <section id="content" class="main">
+                <section style="text-align: center">
+                    <div class="row gtr-uniform">
+                        <div class="col-12">
+                            <h4>Вие слушате Канал 77</h4>
+                            <br/>
+                            <br/>
+                            <audio id="streaming" controls="controls" autoplay="autoplay">
+                                <source src="http://kanal77.mk:8088/live.mp3"/>
+                                Your browser does not support the audio element.
+                            </audio>
+                            <br/>
+                            <span style="font-size: 10px;">*За да се вратите на почеток, кликнете на логото погоре</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <footer id="footerIns"></footer>
+    </div>
+
+    <div id="scripts">
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../../assets/js/browser.min.js"></script>
+        <script src="../../assets/js/breakpoints.min.js"></script>
+        <script src="../../assets/js/util.js"></script>
+        <script src="../../assets/js/main.js"></script>
+    </div>
+</body>
+</html>
