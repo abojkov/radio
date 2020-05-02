@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
     <script rel="stylesheet" src="../../assets/js/jquery.min.js"></script>
+    <script rel="script" src="../../assets/js/myScript.js"></script>
     <script>
         $(document).ready(function() {
             $("#headerIns").load("../headerC.html");
             $("#footerIns").load("../footerC.html");
-            document.getElementById('streaming').play();
         });
     </script>
 </head>
@@ -30,7 +30,7 @@
                             <h4>Вие слушате Mad Radio</h4>
                             <br/>
                             <br/>
-                            <audio id="streaming" controls="controls" autoplay="autoplay">
+                            <audio class="outofchrome" id="streaming" controls="controls" autoplay="autoplay">
                                 <source src="http://mediaserver.mad.tv/stream"/>
                                 Your browser does not support the audio element.
                             </audio>

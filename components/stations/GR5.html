@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
     <script rel="stylesheet" src="../../assets/js/jquery.min.js"></script>
+    <script rel="script" src="../../assets/js/myScript.js"></script>
     <script>
         $(document).ready(function() {
             $("#headerIns").load("../headerC.html");
             $("#footerIns").load("../footerC.html");
-            document.getElementById('streaming').play();
         });
     </script>
 </head>
@@ -30,8 +30,10 @@
                             <h4>Вие слушате Nostos</h4>
                             <br/>
                             <br/>
-
-                            <video controls="" autoplay="autoplay"><source src="http://144.76.92.208:7878/;type=mp3"></video>
+                            <audio class="outofchrome" id="streaming" controls="controls" autoplay="autoplay">
+                                <source src="http://144.76.92.208:7878/;type=mp3"/>
+                                Your browser does not support the audio element.
+                            </audio>
                             <br/>
                             <span style="font-size: 10px;">*За да се вратите на почеток, кликнете на логото погоре</span>
                         </div>
