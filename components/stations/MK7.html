@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Зона М1 - rAdio</title>
+    <link rel="icon" href="../../images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+    <script rel="stylesheet" src="../../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../assets/pl/dist/jplayer/jquery.jplayer.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#headerIns").load("../headerC.html");
+            $("#footerIns").load("../footerC.html");
+
+            $("#jquery_jplayer_1").jPlayer({
+                ready: function () {
+                    $(this).jPlayer("setMedia", {
+                        m4a: "http://176.9.117.123:9998/;",
+                        oga: "/media/mysound.ogg"
+                    });
+                },
+                swfPath: "/js",
+                supplied: "m4a, oga"
+            });
+        });
+    </script>
+</head>
+<body class="is-preload">
+    <div id="jquery_jplayer_1"></div>
+    <div id="jp_container_1">
+        <a href="#" class="jp-play">Play</a>
+        <a href="#" class="jp-pause">Pause</a>
+    </div>
+</body>
+</html>
