@@ -5,10 +5,12 @@
     <title>rAdio v1.0</title>
     <link rel="icon" href="images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <script rel="stylesheet" src="assets/js/jquery.min.js"></script>
     <script rel="script" src="assets/js/myScript.js"></script>
+    <script src="assets/bootstrap-4.0.0/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
             $("#headerIns").load("components/headerC.html");
@@ -16,16 +18,29 @@
 
             $("#chooseCountry").on("change", function () {
                 var chosenCountry = $("#chooseCountry").val();
-
                 $(".stations").each(function () {
                     $(this).hide();
                 });
-                $("#" + chosenCountry + "Stations").show();
+
+                if(chosenCountry === 'none')
+                    showAllCountries();
+                else
+                    $("#" + chosenCountry + "Stations").show();
             });
 
-            $("#mkStations").load("components/MKStations.html");
-            $("#grStations").load("components/GRStations.html");
-            $("#rsStations").load("components/RSStations.html");
+            loadAllCountries();
+
+            function loadAllCountries(){
+                $("#mkStations").load("components/MKStations.html");
+                $("#grStations").load("components/GRStations.html");
+                $("#rsStations").load("components/RSStations.html");
+            }
+
+            function showAllCountries(){
+                $("#mkStations").show();
+                $("#grStations").show();
+                $("#rsStations").show();
+            }
         });
     </script>
 </head>
@@ -44,10 +59,10 @@
                     <div class="row gtr-uniform">
                         <div class="col-12">
                             <select id="chooseCountry">
-                                <option value="">- Одбери држава -</option>
-                                <option value="mk">Македонија</option>
-                                <option value="gr">Грција</option>
-                                <option value="rs">Србија</option>
+                                <option value="none">- Choose a country -</option>
+                                <option value="mk">North Macedonia</option>
+                                <option value="gr">Greece</option>
+                                <option value="rs">Serbia</option>
                             </select>
                         </div>
                     </div>

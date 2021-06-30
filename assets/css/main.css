@@ -1,11 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* Additional */
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -165,12 +161,11 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
-		border-bottom: dotted 1px;
 		color: inherit;
 	}
 
 		a:hover {
-			border-bottom-color: transparent;
+			/*border-bottom-color: transparent;*/
 		}
 
 	strong, b {
@@ -2714,6 +2709,7 @@ input, select, textarea {
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
+		margin-bottom: 50px;
 	}
 
 	table {
@@ -3766,24 +3762,44 @@ input, select, textarea {
 
 /* Wrapper */
 
+#wrapper {
+	width: 64em;
+	max-width: calc(100% - 4em);
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+
 	#wrapper {
-		width: 64em;
-		max-width: calc(100% - 4em);
-		margin: 0 auto;
+		max-width: calc(100% - 2em);
 	}
 
-		@media screen and (max-width: 480px) {
+}
 
-			#wrapper {
-				max-width: calc(100% - 2em);
-			}
+@media screen and (max-width: 360px) {
 
-		}
+	#wrapper {
+		max-width: 100%;
+	}
 
-		@media screen and (max-width: 360px) {
+}
 
-			#wrapper {
-				max-width: 100%;
-			}
+.title {
+	background: deepskyblue;
+	padding: 5px;
+	border-radius: 3px;
+	color: white !important;
+	font-weight: bold;
+}
 
-		}
+.link-highlight {
+	border-bottom: dotted 1px;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+section img {
+	max-height: 200px;
+}
